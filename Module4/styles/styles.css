@@ -1,0 +1,68 @@
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+html,body {
+  min-height:100%;
+} 
+
+
+body {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#98b0d9+0,b1c8ef+59,c3d9ff+100 */
+  background: rgb(152,176,217); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(152,176,217,1) 0%, rgba(177,200,239,1) 59%, rgba(195,217,255,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(152,176,217,1) 0%,rgba(177,200,239,1) 59%,rgba(195,217,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(152,176,217,1) 0%,rgba(177,200,239,1) 59%,rgba(195,217,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#98b0d9', endColorstr='#c3d9ff',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+  text-align: center;
+  color: #DC143C;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.btn {
+  width: 250px;
+  margin: 15px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.row-line {
+  border-bottom: 2px solid #F08080;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.cat-name {
+  color: #4B0082;
+}
+
+.price {
+  color: #4B0082;
+}

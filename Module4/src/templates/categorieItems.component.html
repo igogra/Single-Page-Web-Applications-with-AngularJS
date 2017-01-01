@@ -1,0 +1,15 @@
+
+<div class="row row-line">
+	<div class="col-md-2"><strong>Name:</strong></div>
+	<div class="col-md-2"><strong>Short Name:</strong></div>
+	<div class="col-md-7"><strong>Description:</strong></div>
+	<div class="col-md-1"><strong>Price:</strong></div>
+</div>
+
+<div class="row row-line" ng-repeat="categorieItem in $ctrl.categorieItems">
+	<div class="col-md-2">{{categorieItem.name}}</div>
+	<div class="col-md-2">{{categorieItem.short_name}}</div>
+	<div class="col-md-7">{{categorieItem.description}}</div>
+	<div class="col-md-1 price">${{categorieItem.price_large}}</div>
+</div>
+

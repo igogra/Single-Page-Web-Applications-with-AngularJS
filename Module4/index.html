@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app='MenuApp'>
+  <head>
+    <title>Module 4 Solution</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+
+    <div class="container">
+
+        <h1>Restaurant Menu App</h1>
+
+        <ui-view></ui-view>
+
+    </div>
+
+
+
+    <!-- Libraries -->
+    <script src="libs/angular.min.js"></script>
+    <script src="libs/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/modules/menuapp.module.js"></script>
+    <script src="src/modules/data.module.js"></script>
+
+    <!-- Routs -->
+    <script src="src/routes/routes.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/controllers/categories.controller.js"></script>
+    <script src="src/controllers/categorieItems.controller.js"></script>
+
+    <!-- Services -->
+    <script src="src/services/menudata.service.js"></script>
+
+    <!-- Components -->
+    <script src="src/components/categories.component.js"></script>
+    <script src="src/components/items.component.js"></script>
+
+  </body>
+</html>
