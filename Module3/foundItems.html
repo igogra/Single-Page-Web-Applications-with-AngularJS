@@ -1,40 +1,14 @@
 <div class="row">
-    <div class="col-xs-12 col-sm-12" ng-repeat="item in ctrlList.foundItems">
-        <div class="well well-sm">
-            <div class="row">
-                <div class="col-xs-12 col-sm-8">
-                    <h6 class="text-success">
-                        Name: {{ item['name'] }}
-                    </h6>
-                </div>
-                <div class="col-xs-12 col-sm-4">
-                    <h6 class="text-info">
-                        Short Name: {{ item['short_name'] }}
-                    </h6>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12">
-                    <h6 class="text-warning">
-                        Description: {{ item['description'] }}
-                    </h6>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-2 col-sm-offset-5">
-                    <input type="button"
-                           ng-click="ctrlList.onRemove({index: $index});"
-                           class="btn btn-danger btn-sm"
-                           value="Don't want this one!">
-                </div>
+    <div ng-repeat="item in menu.foundItems">
+        <div class="clearfix" ng-if="$index % 2 == 0"></div>
+        <div class="col-md-6">
+            <div class="jumbotron">
+                <h2>{{item.name}}</h2>
+                <h3>{{item.short_name}}</h3>
+                <p>{{item.description}}</p>
+                <input type="button" ng-click="menu.onRemove({index: $index})" class="btn btn-lg btn-primary" value="Don't want this one!">
             </div>
         </div>
     </div>
-    <!--<div ng-if="ctrlList.isEmpty()">-->
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 text-center h4 text-danger">
-            {{ ctrlList.onEmpty }}
-        </div>
-    </div>
-    <!--</div>-->
 </div>
+<div class="alert alert-danger" role="alert" ng-show="menu.onEmpty">{{menu.onEmpty}}</div>
